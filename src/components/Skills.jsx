@@ -6,6 +6,9 @@ import { SiTypescript } from "react-icons/si";
 import { FaFigma } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
 import TechIcon from "./TechIcons";
+import { SiXcode } from "react-icons/si";
+import { DiVisualstudio } from "react-icons/di";
+import { FaGitAlt } from "react-icons/fa";
 
 const Skills = () => {
   return (
@@ -23,6 +26,10 @@ const Skills = () => {
         <TechIcon icon={SiTypescript} name="TypeScript" />
         <TechIcon icon={IoLogoJavascript} name="JavaScript" />
         <TechIcon icon={FaFigma} name="Figma" />
+        <TechIcon icon={SiXcode} name="Xcode" />
+        <TechIcon icon={DiVisualstudio} name="Visual Studio Code" />
+        <TechIcon icon={FaGitAlt} name="Git" />
+
       </div>
     </div>
   );

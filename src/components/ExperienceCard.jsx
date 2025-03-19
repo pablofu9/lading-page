@@ -10,7 +10,7 @@ const ExperienceCard = ({
   techIcon: TechIconComponent // Nuevo prop para el icono tecnológico
 }) => {
   return (
-    <div className="bg-gray-900 shadow-lg rounded-lg p-10 mx-auto w-auto h-auto shadow-gray-500/30">
+    <div className="bg-black/100 shadow-lg rounded-lg p-10 mx-auto w-auto h-auto shadow-gray-500/10">
       <div className="flex items-center mb-4">
         {/* Icono tecnológico (si se pasa) */}
         {TechIconComponent && <TechIcon icon={TechIconComponent}/>}

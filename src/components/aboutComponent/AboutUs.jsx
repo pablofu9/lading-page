@@ -1,5 +1,5 @@
 import React from "react";
-import LanguageSkill from "./aboutComponent/LanguageSkill";
+import LanguageSkill from "./LanguageSkill";
 
 const AboutUs = () => {
   return (

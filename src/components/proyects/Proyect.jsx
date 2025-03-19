@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Project = ({ images, description, title }) => {
+const Project = ({ images, description, title, hasLink = "" }) => {
   const [currentImage, setCurrentImage] = useState(0); // Estado de la imagen seleccionada
   const [isModalOpen, setIsModalOpen] = useState(false); // Estado para controlar la apertura del modal
 
@@ -30,20 +30,35 @@ const Project = ({ images, description, title }) => {
   return (
     <div className="w-full mx-auto py-10 flex flex-col sm:flex-row ">
       {/* Carrusel de imágenes */}
-      <div className="flex flex-col items-center sm:items-start">
-        <h2 className="text-5xl font-bold mb-6 uppercase bg-gradient-blue-purple bg-clip-text text-transparent text-center">
-          {title}
-        </h2>
+      <div className="flex flex-col items-center sm:items-start w-full">
+        <div className="flex flex-row justify-between w-full pr-11">
+          <h2 className="text-5xl font-bold mb-6 uppercase bg-gradient-blue-purple bg-clip-text text-transparent">
+            {title}
+          </h2>
+          {hasLink.length > 0 && (
+            <a
+              href={hasLink}
+              className="text-white font-light text-sm rounded-md capitalize underline hover:text-orangeColor"
+            >
+              Puedes descargarla aquí
+            </a>
+          )}
+        </div>
         <div className="flex-col sm:flex-row flex">
-        <div className="max-w-[500px] rounded-full" onClick={() => openModal(0)}>
-          {/* Imagen principal */}
+          <div
+            className="max-w-[500px] rounded-full"
+            onClick={() => openModal(0)}
+          >
+            {/* Imagen principal */}
             <img
               src={images[0]}
               alt={`Project Image ${currentImage + 1}`}
               className=" w-[250px] h-[500px] cursor-pointer "
             />
-        </div>
-        <span className="flex-1 px-1 sm:px-11 py-11 sm:py-0">{description}</span>
+          </div>
+          <span className="flex-1 px-1 sm:px-11 py-11 sm:py-0">
+            {description}
+          </span>
         </div>
       </div>
 
