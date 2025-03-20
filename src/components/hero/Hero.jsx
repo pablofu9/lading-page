@@ -49,7 +49,7 @@ const Hero = () => {
           SwiftUI.
         </p>
         <div className="flex flex-col">
-          <div className="flex flex-row">
+          <div className="flex flex-col sm:flex-row">
             <div className="my-8">
               <a
                 href="/CV_PabloFuertes.pdf" // Ruta al archivo de tu CV
