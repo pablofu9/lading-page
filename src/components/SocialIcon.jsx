@@ -7,7 +7,7 @@ const SocialIcon = ({ icon: Icon, color = "text-white", url }) => {
       <div className="flex flex-col items-center gap-2 p-4">
         <a href={url} target="_blank" rel="noreferrer">
           <Icon
-            size={60}
+            size={50}
             className={`${color} transition-transform transform hover:scale-110 hover:opacity-80`}
           />
         </a>

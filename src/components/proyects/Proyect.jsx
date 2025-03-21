@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 
-const Project = ({ images, description, title, hasLink = "" }) => {
-  const [currentImage, setCurrentImage] = useState(0); // Estado de la imagen seleccionada
+const Project = ({ images, description, title, hasLink = "", logo, shortText }) => {
   const [isModalOpen, setIsModalOpen] = useState(false); // Estado para controlar la apertura del modal
 
   // Función para abrir el modal
-  const openModal = (index) => {
-    setCurrentImage(index);
+  const openModal = () => {
     setIsModalOpen(true);
   };
 
@@ -15,59 +13,25 @@ const Project = ({ images, description, title, hasLink = "" }) => {
     setIsModalOpen(false);
   };
 
-  // Función para ir a la siguiente imagen en el modal
-  const nextImage = () => {
-    setCurrentImage((prevImage) => (prevImage + 1) % images.length); // Ciclo de imágenes
-  };
-
-  // Función para ir a la imagen anterior en el modal
-  const prevImage = () => {
-    setCurrentImage(
-      (prevImage) => (prevImage - 1 + images.length) % images.length
-    ); // Ciclo de imágenes
-  };
-
   return (
-    <div className="w-full mx-auto py-10 flex flex-col sm:flex-row ">
-      {/* Carrusel de imágenes */}
-      <div className="flex flex-col items-center sm:items-start w-full">
-        <div className="flex flex-row justify-between w-full pr-11">
-          <h2 className="text-5xl font-bold mb-6 uppercase bg-gradient-blue-purple bg-clip-text text-transparent">
-            {title}
-          </h2>
-          {hasLink.length > 0 && (
-            <a
-              href={hasLink}
-              className="text-white font-light text-sm rounded-md capitalize underline hover:text-orangeColor"
-            >
-              Puedes descargarla aquí
-            </a>
-          )}
-        </div>
-        <div className="flex-col sm:flex-row flex">
-          <div
-            className="max-w-[500px] rounded-full"
-            onClick={() => openModal(0)}
-          >
-            {/* Imagen principal */}
-            <img
-              src={images[0]}
-              alt={`Project Image ${currentImage + 1}`}
-              className=" w-[250px] h-[500px] cursor-pointer "
-            />
-          </div>
-          <span className="flex-1 px-1 sm:px-11 py-11 sm:py-0">
-            {description}
-          </span>
-        </div>
-      </div>
+    <div className=" mx-auto py-10 flex flex-col sm:flex-row ">
+      <button onClick={openModal}>
+        <div className="relative bg-darkGray rounded-md w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] overflow-hidden hover:opacity-70 items-center flex flex-col ">
+        <img src={logo} className="absolute w-1/2 h-1/2 object-cover top-4" />
 
+          {/* Recuadro semitransparente en la parte inferior con texto encima */}
+          <div className="absolute bottom-0 w-full bg-white bg-opacity-50 rounded-b-md p-2 flex items-center justify-center h-1/3  flex-col">
+          <span className="text-black z-10 font-light text-md text-justify">{shortText}</span>
+            <span className="underline text-white text-xl">Pulsa para ver más!</span>
+          </div>
+        </div>
+      </button>
       {/* Descripción del proyecto */}
 
       {/* Modal de galería */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-tertiary bg-opacity-75 z-50 flex justify-center items-center">
-          <div className="relative w-full max-w-[900px] bg-black/100 max-h-full p-10 rounded-md overflow-auto">
+          <div className="relative w-full max-w-[900px] bg-darkGray max-h-full p-10 rounded-md overflow-auto ">
             {/* Ícono de cerrar */}
             <button
               onClick={closeModal}
@@ -99,6 +63,8 @@ const Project = ({ images, description, title, hasLink = "" }) => {
                 );
               })}
             </div>
+            <span className="text-justify font-medium mt-6 block">{description}</span>
+
           </div>
         </div>
       )}

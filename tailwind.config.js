@@ -8,7 +8,8 @@ export default {
         secondary: "#9182FF",
         bgColor: "#3A374D",
         tertiary: "#7F7AA2",
-        orangeColor: "#d66d2a"
+        orangeColor: "#d66d2a",
+        darkGray: "#262626"
       },
       backgroundImage: {
         "gradient-orange-red": "linear-gradient(90deg, #d66d2a, #ff4500, #ff0000)",

@@ -9,6 +9,8 @@ import Tink5 from "../assets/images/tink/tink5.jpeg";
 import Tink6 from "../assets/images/tink/tink6.jpeg";
 import BagIt1 from "@/assets/images/bagit/gastos.jpeg";
 import BagIt2 from "@/assets/images/bagit/modo_oscuro.jpeg";
+import TinkLogo from "@/assets/images/tink/tinkLogo.png";
+import BagItLogo from "@/assets/images/bagit/bagitLogo.png";
 
 const PersonalProjects = () => {
   const bagItData = {
@@ -16,12 +18,15 @@ const PersonalProjects = () => {
     images: [BagIt1, BagIt2],
     description:
       "Bag It, una aplicación de listas de la compra que permite hacerseguimiento de compras y gastos. Creada con Swift y SwiftUI,utilizando Clean Architecture y MVVM. Implementé FirebaseHosting como backend y realicé todo el proceso: desde laplanificación y diseño en Figma hasta el desarrollo y publicación en el App Store.",
+      shortText: "Bag It es una app de listas de compras con gestión de gastos, MVVM, Swift y SwiftUI."
   };
   const tinkData = {
     title: "Tink",
     images: [Tink1, Tink2, Tink3, Tink4, Tink5, Tink6],
     description:
-      "Estoy trabajando en una nueva app que estará muy pronto en el App Store, Tink!! La idea principal de la app, es conectar personas a traves de sus habilidades, la app consiste en un Market Place en el cual los usuarios podrán publicar sus habilidades y ser contactados por el resto de usuarios para acordar o contratar sus servicios. La app usa MVVM junto con Clean architecture como arquitectura de diseño, SwiftUI como framework de desarrollo y Swift como lenguaje, también usa múltiples tecnologías accesorias como Firebase para autenticación y base de datos o librerías como Lotties para dar una aspecto gráfico innovador. Está casi terminada, despero que os guste.  😃.",
+      "Market Place en el cual los usuarios podrán publicar sus habilidades y ser contactados por el resto de usuarios para informarse y contratar sus servicios. La app usa MVVM junto con Clean architecture como arquitectura de diseño, SwiftUI como framework de desarrollo y Swift como lenguaje. También usa múltiples tecnologías accesorias como Firebase para autenticación y base de datos, o librerías como Lotties para dar una aspecto gráfico innovador. Está casi terminada, espero que os guste! 😃",
+    shortText:
+      "Market Place de habilidades, para encontrar y ofertar la tuya. Ha sido desarrollada con Swift y SwiftUI.",
   };
 
   return (
@@ -38,17 +43,21 @@ const PersonalProjects = () => {
           <h2 className="text-4xl md:text-4xl font-bold mb-6 uppercase bg-gradient-orange-red bg-clip-text text-transparent text-center">
             Proyectos personales
           </h2>
-          <div>
+          <div className="flex flex-col sm:flex-row space-x-10">
             <Project
               title={bagItData.title}
               images={bagItData.images}
               description={bagItData.description}
               hasLink="https://apps.apple.com/us/app/bag-it/id6740699489"
+              logo={BagItLogo}
+              shortText={bagItData.shortText}
             />
             <Project
               title={tinkData.title}
               images={tinkData.images}
               description={tinkData.description}
+              logo={TinkLogo}
+              shortText={tinkData.shortText}
             />
           </div>
         </div>

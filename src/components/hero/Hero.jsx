@@ -21,7 +21,7 @@ const Hero = () => {
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 w-full mx-auto h-auto py-8 px-4">
-      <div className="col-span-1 my-auto mx-auto w-[300px] h-[300px] lg:w-[300px] ">
+      <div className="col-span-1 my-auto mx-auto w-[300px] h-[300px] lg:w-[300px] items-center">
         <img
           src={HeroImage}
           alt="Pablo Fuertes Ruiz"
