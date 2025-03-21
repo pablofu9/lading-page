@@ -10,7 +10,7 @@ import Tink6 from "../assets/images/tink/tink6.jpeg";
 import BagIt1 from "@/assets/images/bagit/gastos.jpeg";
 import BagIt2 from "@/assets/images/bagit/modo_oscuro.jpeg";
 import TinkLogo from "@/assets/images/tink/tinkLogo.png";
-import BagItLogo from "@/assets/images/bagit/bagitLogo.png";
+import BagItLogo from "@/assets/images/bagit/bagItLogo.png";
 
 const PersonalProjects = () => {
   const bagItData = {
