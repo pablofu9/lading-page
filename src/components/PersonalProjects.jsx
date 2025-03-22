@@ -39,11 +39,11 @@ const PersonalProjects = () => {
       viewport={{ once: false }} // Se activa solo una vez cuando entra en vista
     >
       <div className="">
-        <div className="my-auto mx-6">
+        <div className="mx-6">
           <h2 className="text-4xl md:text-4xl font-bold mb-6 uppercase bg-gradient-orange-red bg-clip-text text-transparent text-center">
             Proyectos personales
           </h2>
-          <div className="flex flex-col sm:flex-row space-x-10">
+          <div className="flex flex-col sm:flex-row gap-x-6">
             <Project
               title={bagItData.title}
               images={bagItData.images}
