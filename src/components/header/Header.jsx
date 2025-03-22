@@ -16,7 +16,7 @@ const Header = () => {
     setNav(!nav);
   }
   return (
-    <div className="bg-black h-[100px] text-white w-full mx-auto flex justify-between items-center px-11">
+    <div className="bg-transparent h-[100px] text-white w-full mx-auto flex justify-between items-center px-11">
       <h1 className="text-3xl font-bond ml-4 bg-clip-text text-transparent bg-gradient-orange-red pl-20 uppercase">
         Pablo Fuertes
       </h1>

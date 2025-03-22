@@ -27,6 +27,8 @@ const AboutUs = () => {
             <h3 className="text-orangeColor text-xl font-bold uppercase">Idiomas</h3>
             <LanguageSkill language="Español" level={5} /> {/* Nivel 5 */}
             <LanguageSkill language="Ingles" level={4} /> {/* Nivel 5 */}
+            <LanguageSkill language="Frances" level={4} /> {/* Nivel 5 */}
+
           </div>
         </div>
       </div>

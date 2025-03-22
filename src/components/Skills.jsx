@@ -9,6 +9,8 @@ import TechIcon from "./TechIcons";
 import { SiXcode } from "react-icons/si";
 import { DiVisualstudio } from "react-icons/di";
 import { FaGitAlt } from "react-icons/fa";
+import { FaHtml5 } from "react-icons/fa";
+import { FaCss3Alt } from "react-icons/fa6";
 
 const Skills = () => {
   return (
@@ -29,6 +31,9 @@ const Skills = () => {
         <TechIcon icon={SiXcode} name="Xcode" />
         <TechIcon icon={DiVisualstudio} name="Visual Studio Code" />
         <TechIcon icon={FaGitAlt} name="Git" />
+        <TechIcon icon={FaHtml5} name="HTML" />
+        <TechIcon icon={FaCss3Alt} name="CSS" />
+
 
       </div>
     </div>
