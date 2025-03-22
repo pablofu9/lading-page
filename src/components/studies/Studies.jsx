@@ -26,6 +26,13 @@ const Studies = () => {
           </div>
           <div className="border p-2 rounded-md">
             <h1 className="text-md md:text-md font-bold mb-2 uppercase bg-gradient-blue-purple bg-clip-text text-transparent text-center">
+              Grado Administración y dirección de empresas (ADE)
+            </h1>
+            <span>03/2019 - 05/2022</span>
+            <h2>Universidad de Valladolid</h2>
+          </div>
+          <div className="border p-2 rounded-md">
+            <h1 className="text-md md:text-md font-bold mb-2 uppercase bg-gradient-blue-purple bg-clip-text text-transparent text-center">
               DAW - Desarrollo de aplicaciones Web (FP)
             </h1>
             <span>09/2022 - 04/2023</span>
