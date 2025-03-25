@@ -4,6 +4,7 @@ import { MdOutlineEmail } from "react-icons/md";
 import { MdOutlinePhone } from "react-icons/md";
 import { TiLocationArrowOutline } from "react-icons/ti";
 import { motion } from "framer-motion";
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -84,7 +85,7 @@ const Contact = () => {
               id="name"
               value={formData.name}
               onChange={handleChange}
-              className="p-3 rounded-lg border border-gray-300 bg-gray-800 text-white focus:outline-none focus:border-purple-500"
+              className="p-3 rounded-lg border border-gray-300 bg-gray-800 text-white focus:outline-none focus:border-orangeColor"
               required
             />
 
@@ -97,7 +98,7 @@ const Contact = () => {
               id="email"
               value={formData.email}
               onChange={handleChange}
-              className="p-3 rounded-lg border border-gray-300 bg-gray-800 text-white focus:outline-none focus:border-purple-500"
+              className="p-3 rounded-lg border border-gray-300 bg-gray-800 text-white focus:outline-none focus:border-orangeColor"
               required
             />
 
@@ -110,7 +111,7 @@ const Contact = () => {
               value={formData.message}
               onChange={handleChange}
               rows="4"
-              className="p-3 rounded-lg border border-gray-300 bg-gray-800 text-white focus:outline-none focus:border-purple-500"
+              className="p-3 rounded-lg border border-gray-300 bg-gray-800 text-white focus:outline-none focus:border-orangeColor"
               required
             ></textarea>
           </div>

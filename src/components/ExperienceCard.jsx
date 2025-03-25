@@ -10,7 +10,7 @@ const ExperienceCard = ({
   techIcon: TechIconComponent // Nuevo prop para el icono tecnológico
 }) => {
   return (
-    <div className="bg-darkGray shadow-lg rounded-lg p-10 mx-auto w-auto h-auto shadow-gray-500/10">
+    <div className="bg-darkGray shadow-lg rounded-lg p-10 mx-auto w-auto h-auto shadow-gray-500/10 text-justify">
       <div className="flex items-center mb-4">
         {/* Icono tecnológico (si se pasa) */}
         {TechIconComponent && <TechIcon icon={TechIconComponent}/>}
@@ -23,15 +23,17 @@ const ExperienceCard = ({
         </div>
       </div>
       <div className="border-l-4 border-orangeColor pl-4">
-        <ul className="list-disc list-inside text-white/60 py-5">
+      <p className="font-semibold mt-4 underline">Responsabilidades:</p>
+
+        <ul className="list-disc list-inside text-white/80 py-5">
           {description.map((desc, index) => (
             <li key={index}>{desc}</li>
           ))}
         </ul>
         {proyects.length > 0 && (
           <>
-            <p className="font-semibold mt-4">Proyectos destacados:</p>
-            <ul className="list-disc list-inside text-white/60 py-5">
+            <p className="font-semibold mt-4 underline">Proyectos:</p>
+            <ul className="list-disc list-inside text-white/80 py-5 ">
               {proyects.map((project, index) => (
                 <li key={index}>{project}</li>
               ))}
