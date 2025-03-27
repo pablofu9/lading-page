@@ -1,10 +1,10 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
-import HeroImage from "@/assets/images/me.jpg"
 import { useState } from "react";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import SocialIcon from "@/components/SocialIcon";
+import PFBD from "@/assets/images/pf_db.png"
 
 const Hero = () => {
   const [nav, setNav] = useState(false);
@@ -23,9 +23,9 @@ const Hero = () => {
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 w-full mx-auto h-auto py-8 px-4">
       <div className="col-span-1 my-auto mx-auto w-[300px] h-[300px] lg:w-[300px] items-center">
         <img
-          src={HeroImage}
+          src={PFBD}
           alt="Pablo Fuertes Ruiz"
-          className="w-full h-full object-cover rounded-full shadow"
+          className="w-full h-full object-cover"
         />
       </div>
       <div className="col-span-2 px-5">
